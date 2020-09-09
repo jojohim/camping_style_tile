@@ -2,66 +2,75 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Oswald:wght@200&display=swap');
 
+/*OVERALL GUIDE*/
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-/* THIS IS ALL meant for editing. You might want to do it differently,
-name the variables differently,
-use the fonts in other ways in the font hierarchy etc. */
 
-/* change these */
 :root {
-  --bg-color:#C85100;
-  --link-color: #1C728B;
-  --link-hover-color: #032436;
-  --color-4: #F3941D;
-  --color-5: ;
+    --colour-1: #C85100;
+    --colour-2: #3a5a40;
+    --colour-3: #a3b18a;
+    --colour-4: #f4f3ee;
+    --colour-5: #ffff;
 
-  --primary-font: "Amatic SC", bold;
-  --secondary-font: "Oswald";
-  --main-text-color: #000;
-
-  --white-space: 1rem;
+    --primary-font: "Amatic SC", bold;
+    --secondary-font: "Oswald";
+    --main-text-color: #000;
+    --white-space: 1rem;
 }
+
+main {
+    padding: calc(2 * var(--white-space));
+}
+
+section {
+    margin-bottom: calc(3 * var(--white-space));
+}
+
+
+/*LINKS*/
+
 
 a {
-  transition: all 3s;
+    font-family: var(--secondary-font);
+    transition: all 1s;
+    color: var(--colour-3);
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
 }
-
 a:hover {
-  color: var(--link-hover-color);
+    color: var(--colour-2);
 }
 
-html {
-  font-size: 100%;
-  font-family: var(--primary-font);
+/*LIST DESIGN*/
+ul {
+    display: flex;
+    list-style: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+ul li:last-child {
+    margin-right: 0;
 }
 
-header,
-main,
-footer {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: calc(2 * var(--white-space));
-}
-
-.full-width {
-  background: var(--bg-color);
-  color: white;
-  width: 100%;
-}
 /*FONTS*/
+
+.swatches li {
+        margin-right: 1%;
+        height: 8em;
+        width: 8em;
+        display: flex;
+        flex-direction: column;
+    }
 
 h1 {
     font-family: var(--primary-font);
     font-size: 3em;
     font-weight: bold;
+    margin: auto;
+    color: var(--colour-1);
 }
 
 h2 {
@@ -82,112 +91,122 @@ p {
     font-weight: 200;
 }
 
-main {
-  padding: calc(2 * var(--white-space));
+.typography-main {
+    color: var(--main-text-color);
 }
 
-section {
-  margin-bottom: calc(4 * var(--white-space));
+p[class*="font-details-"] {
+    margin-top: rem;
+    margin-bottom: calc(3 * var(--white-space));
+    font-size: 1rem;
+    font-family: var(--secondary-font);
+    color: #6f6f6f;
+}
+
+/*HEADER*/
+
+.full-width {
+    position: relative;
+    text-align: center;
+    background-color: var(--colour-4);
+    color: var(--main-text-color);
+}
+
+.header_item {
+   margin-left: 2vw;
+}
+
+header h1 {
+    color: var(--main-text-color);
+}
+
+.header-wrapper {
+    padding: 2vw 0 2vw 0;
+
 }
 
 .section-heading {
-  font-style: italic;
-  font-size: 1.3rem;
-  color: #777;
-  margin: 0.5rem 0;
-}
-
-ul {
-  display: flex;
-  justify-content: space-between;
-}
-
-.swatches li {
-  margin-right: 5vw;
-  height: 15vw;
-  width: 20%;
-}
-
-ul li:last-child {
-  margin-right: 0;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #777;
+    margin: 0.5rem 0;
 }
 
 /*COLOUR SWATCHES*/
+
+.swatchgrid {
+    margin-left: -3em;
+}
+
 .color-swatch-1 {
-  background-color: var(--bg-color);
+    background-color: var(--colour-1);
 }
 
 .color-swatch-2 {
-  background-color: var(--link-color);
+    background-color: var(--colour-2);
 }
 
 .color-swatch-3 {
-  background-color: var(--link-hover-color);
+    background-color: var(--colour-3);
 }
 
 .color-swatch-4 {
-  background-color: var(--color-4);
+    background-color: var(--colour-4);
 }
 
 .color-swatch-5 {
-  background-color: var(--color-5);
+    background-color: var(--colour-5);
 }
 
 
 /*ICONS*/
 
 .icons li {
-  height: auto;
-  width: 15vw;
-  margin-right: 2vw;;
+    width: 10em;
 }
 
-.icon-1 {
-  background: url(../img/tent_logo.svg) top left repeat;
-    background-repeat: no-repeat;
+#icons-wrapper {
+    display: flex;
 }
-
-.icon-2 {
-  background: url(../img/location_icon.svg) top left repeat;
-    background-repeat: no-repeat;
+.icons img{
+    height: 12vw;
+    margin-right: 2em;
 }
 
 
-.images ul {
-  flex-direction: column;
-  text-align: center;
-}
 
-.images li {
-  display: block;
-  /*margin-right: 5vw;*/
-  margin-bottom: 1rem;
-}
+
 /*BUTTON STYLING*/
 
 button {
-    padding: 0.5em 2em 0.5em 2em;
     font-family: var(--secondary-font);
     font-size: 22px;
     border-radius: 5em;
-    background-color: var(--bg-color);
+    background-color: var(--colour-1);
 }
 
 .primary-button {
+    padding: 0.5em 2.5em 0.5em 2em;
+    position: relative;
     color: white;
     margin-right: 2em;
-    border: solid var(--bg-color);
+    border: solid var(--colour-1);
 }
 
+.primary-button img {
+    position: absolute;
+    top: 0.7em;
+    left: 6em;
+}
 .primary-button:hover {
-    border-color: solid var(--bg-color);
+    border-color: solid var(--colour-1);
     cursor: pointer;
-    background: white;
-    color: var(--bg-color)
+    background: none;
+    color: var(--colour-1)
 }
 
 .secondary-button {
-    color: var(--bg-color);
+    color: var(--colour-2);
     border: none;
     background: none;
     font-family: var(--primary-font);
@@ -195,91 +214,51 @@ button {
 }
 
 .secondary-button:hover {
-    text-decoration: underline;
     cursor: pointer;
+    color: var(--colour-3);
 }
 
-button:focus,
-button:active,
-button:focus-within {
-  outline: 0;
-  border-radius: 4px;
-}
+/*ADJECTIVES*/
 
-.typography-main {
-  color: var(--main-text-color);
+.adjectives ul li{
+    opacity: 0.5;
+    font-size: 2rem;
+    padding-right: 1em;
 }
 
 
-
-p.typography-sample {
-  font-family: var(--secondary-font);
-  line-height: 1.5;
-  max-width: 960px;
-}
-
-strong {
-  font-weight: bold;
-}
-
-em {
-  font-style: italic;
-}
-
-a {
-  font-family: var(--secondary-font);
-  color: var(--link-color);
-    font-size: 1.2em;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-p[class*="font-details-"] {
-  margin-top: 0.5rem;
-  margin-bottom: calc(2 * var(--white-space));
-  font-size: 0.75rem;
-  font-family: var(--secondary-font);
-  color: #6f6f6f;
-}
-
-.adjectives ul {
-  font-size: 2rem;
-  opacity: 0.5;
-}
-
-.adjectives ul {
-  flex-direction: column;
-}
+/*FOOTER*/
 
 footer {
-  font-style: italic;
+    padding: 2vw;
 }
 
+/*MEDIA QUERIES*/
+
 @media (min-width: 800px) {
-  main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 4rem;
-  }
-
-ul {
-        list-style: none;
+    main {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 2em;
     }
-  .swatches li {
-    margin-right: 1%;
-    height: 10vw;
-    width: 10vw;
-    display: flex;
-    flex-direction: column;
-  }
 
-  .icons li {
-    height: 15vw;
-  }
 }
 
 @media (min-width: 900px) {
-  .adjectives ul {
-    flex-direction: row;
-  }
+    .adjectives ul {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .icons img {
+        height: 25vw;
+    }
+}
+
+/* HIDE CLASS*/
+
+.hide {
+    display: none;
 }
