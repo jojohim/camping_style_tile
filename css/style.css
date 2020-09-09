@@ -1,0 +1,285 @@
+/*IMPORT FONTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Oswald:wght@200&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* THIS IS ALL meant for editing. You might want to do it differently,
+name the variables differently,
+use the fonts in other ways in the font hierarchy etc. */
+
+/* change these */
+:root {
+  --bg-color:#C85100;
+  --link-color: #1C728B;
+  --link-hover-color: #032436;
+  --color-4: #F3941D;
+  --color-5: ;
+
+  --primary-font: "Amatic SC", bold;
+  --secondary-font: "Oswald";
+  --main-text-color: #000;
+
+  --white-space: 1rem;
+}
+
+a {
+  transition: all 3s;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+html {
+  font-size: 100%;
+  font-family: var(--primary-font);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header,
+main,
+footer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: calc(2 * var(--white-space));
+}
+
+.full-width {
+  background: var(--bg-color);
+  color: white;
+  width: 100%;
+}
+/*FONTS*/
+
+h1 {
+    font-family: var(--primary-font);
+    font-size: 3em;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: var(--primary-font);
+    font-size: 2em;
+
+}
+
+h3 {
+    font-family: var(--secondary-font);
+    font-size: 1.4em;
+    font-weight: 200;
+}
+
+p {
+    font-family: var(--secondary-font);
+    font-size: 1.2em;
+    font-weight: 200;
+}
+
+main {
+  padding: calc(2 * var(--white-space));
+}
+
+section {
+  margin-bottom: calc(4 * var(--white-space));
+}
+
+.section-heading {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #777;
+  margin: 0.5rem 0;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.swatches li {
+  margin-right: 5vw;
+  height: 15vw;
+  width: 20%;
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+/*COLOUR SWATCHES*/
+.color-swatch-1 {
+  background-color: var(--bg-color);
+}
+
+.color-swatch-2 {
+  background-color: var(--link-color);
+}
+
+.color-swatch-3 {
+  background-color: var(--link-hover-color);
+}
+
+.color-swatch-4 {
+  background-color: var(--color-4);
+}
+
+.color-swatch-5 {
+  background-color: var(--color-5);
+}
+
+
+/*ICONS*/
+
+.icons li {
+  height: auto;
+  width: 15vw;
+  margin-right: 2vw;;
+}
+
+.icon-1 {
+  background: url(../img/tent_logo.svg) top left repeat;
+    background-repeat: no-repeat;
+}
+
+.icon-2 {
+  background: url(../img/location_icon.svg) top left repeat;
+    background-repeat: no-repeat;
+}
+
+
+.images ul {
+  flex-direction: column;
+  text-align: center;
+}
+
+.images li {
+  display: block;
+  /*margin-right: 5vw;*/
+  margin-bottom: 1rem;
+}
+/*BUTTON STYLING*/
+
+button {
+    padding: 0.5em 2em 0.5em 2em;
+    font-family: var(--secondary-font);
+    font-size: 22px;
+    border-radius: 5em;
+    background-color: var(--bg-color);
+}
+
+.primary-button {
+    color: white;
+    margin-right: 2em;
+    border: solid var(--bg-color);
+}
+
+.primary-button:hover {
+    border-color: solid var(--bg-color);
+    cursor: pointer;
+    background: white;
+    color: var(--bg-color)
+}
+
+.secondary-button {
+    color: var(--bg-color);
+    border: none;
+    background: none;
+    font-family: var(--primary-font);
+    font-size: 2em;
+}
+
+.secondary-button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+button:focus,
+button:active,
+button:focus-within {
+  outline: 0;
+  border-radius: 4px;
+}
+
+.typography-main {
+  color: var(--main-text-color);
+}
+
+
+
+p.typography-sample {
+  font-family: var(--secondary-font);
+  line-height: 1.5;
+  max-width: 960px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  font-family: var(--secondary-font);
+  color: var(--link-color);
+    font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+p[class*="font-details-"] {
+  margin-top: 0.5rem;
+  margin-bottom: calc(2 * var(--white-space));
+  font-size: 0.75rem;
+  font-family: var(--secondary-font);
+  color: #6f6f6f;
+}
+
+.adjectives ul {
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+.adjectives ul {
+  flex-direction: column;
+}
+
+footer {
+  font-style: italic;
+}
+
+@media (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+  }
+
+ul {
+        list-style: none;
+    }
+  .swatches li {
+    margin-right: 1%;
+    height: 10vw;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icons li {
+    height: 15vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .adjectives ul {
+    flex-direction: row;
+  }
+}
