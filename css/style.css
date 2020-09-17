@@ -158,6 +158,11 @@ header h1 {
     background-color: var(--colour-5);
 }
 
+/*LOGOS*/
+
+.logos img{
+    height: 8vw;
+}
 
 /*ICONS*/
 
@@ -169,7 +174,7 @@ header h1 {
     display: flex;
 }
 .icons img{
-    height: 10vw;
+    height: 7vw;
     margin-right: 2em;
 }
 
